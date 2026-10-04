@@ -1,5 +1,5 @@
 > [!WARNING]
-> **Unmaintained.** This repository is no longer actively maintained. SpotBuds depended on the Spotify Web API; after Spotify limited indie developer access, the app only worked for a small allowlisted set of users. The author moved on to a Last.fm-based version in [tastebuds](https://github.com/ikrishg/tastebuds). This repo is kept for reference only.
+> **Unmaintained.** This repository is no longer actively maintained. For the author's current Last.fm-based project, see [tastebuds](https://github.com/ikrishg/tastebuds).
 
 <div align="center">
 <div><img src="https://github.com/ikrishg/spotbuds/raw/main/assets/favicon.svg" alt="SpotBuds logo" width="96" height="96"></div>
@@ -8,29 +8,35 @@
 <div><img src="https://github.com/ikrishg/spotbuds/raw/main/assets/cover.png" alt="SpotBuds cover image" width="600"></div>
 </div>
 
-## Status
+## Try it out
 
-SpotBuds is a static site that connected to Spotify, analyzed your listening history, and used [ai.hackclub.com](https://ai.hackclub.com) to generate a short description of your taste. It is **not maintained** and is unlikely to work for new users because of Spotify’s developer policies.
+> [!WARNING]
+> Spotify made it such that, Indie developers can't publish their apps. So, only me and 25 people invited by me can use this app.
+> If you want to try it out, you can ask me for an invite with your spotify email address. I will send you an invite, and you can use the app.
 
-A hosted demo may still exist at [spotbuds.krishg.com](https://spotbuds.krishg.com), but expect broken or invite-only behavior.
+[![Live Demo](https://github.com/user-attachments/assets/f5ddc02e-5ac6-4f9d-85ab-9d31476e7ea5)](https://spotbuds.krishg.com)
 
-## How this worked
+Here's the live demo of the app. You can try it out, but you need to have a Spotify account and be invited by me to use it.
 
-1. The home page had a button to connect your Spotify account.
-2. Clicking it redirected you to Spotify’s authorization page.
-3. After authorization, Spotify redirected back to an auth page.
-4. The auth page stored the access token in the browser’s local storage.
-5. A button on the auth page led to the results page.
-6. The results page fetched Spotify data using the access token.
-7. The app analyzed that data and generated a witty description of your music taste.
-8. It used ai.hackclub.com to generate the description.
+**Live Demo:** [spotbuds.krishg.com](https://spotbuds.krishg.com)
 
-## Running locally (historical)
+## How this works
+
+1. The home page has a button to connect your Spotify account.
+2. When you click the button, it redirects you to Spotify's authorization page.
+3. After you authorize the app, it redirects you back to an auth page.
+4. The auth page stores the access token in the browser's local storage.
+5. There is a button to move to the results page.
+6. The results page fetches your Spotify data using the access token.
+7. It analyzes your data and generates a witty description of your music taste.
+8. It uses ai.hackclub.com to generate the description.
+
+## How to run this locally
 
 1. Clone the repository: `git clone https://github.com/ikrishg/spotbuds.git`
 2. Navigate to the project directory: `cd spotbuds`
-3. Open `index.html` in your browser through a local server (for example `live-server` or another static server).
-4. Create a Spotify app at the [Spotify Developer Dashboard](https://developer.spotify.com/dashboard/applications).
-5. In `config.js`, add a Spotify client ID and redirect URI.
+3. Open the `index.html` file in your browser through a local server (e.g., using `live-server` or any other static server).
+4. Create a spotify app at [Spotify Developer Dashboard](https://developer.spotify.com/dashboard/applications).
+5. In `config.js`, add a spotify client ID and redirect URI.
 
-**NOTE:** The redirect URI should be your local server URL with an `/auth` path, for example `http://localhost:3000/auth`. Use the same redirect URI in the Spotify Developer Dashboard and in `config.js`.
+**NOTE:** The redirect URI should be the URL of your local server, e.g., `http://localhost:3000/auth`, the auth path is mandatory. This should be the redirect URI in both the Spotify Developer Dashboard and in `config.js`.

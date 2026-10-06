@@ -1,11 +1,11 @@
-> [!IMPORTANT]
-> Since spotify closed off their API to indie developers, I switched to using the last.fm API. You can check the code for that project on [tastebuds](https://github.com/kkrishguptaa/tastebuds)
+> [!WARNING]
+> **Unmaintained.** This repository is no longer actively maintained. For the author's current Last.fm-based project, see [tastebuds](https://github.com/ikrishg/tastebuds).
 
 <div align="center">
-<div><img src="https://github.com/kkrishguptaa/spotbuds/raw/main/assets/favicon.svg" alt="SpotBuds logo" width="96" height="96"></div>
+<div><img src="https://github.com/ikrishg/spotbuds/raw/main/assets/favicon.svg" alt="SpotBuds logo" width="96" height="96"></div>
 <h1>SpotBuds</h1>
 <p>One line AI-generated description of your recent music taste 💄</p>
-<div><img src="https://github.com/kkrishguptaa/spotbuds/raw/main/assets/cover.png" alt="SpotBuds cover image" width="600"></div>
+<div><img src="https://github.com/ikrishg/spotbuds/raw/main/assets/cover.png" alt="SpotBuds cover image" width="600"></div>
 </div>
 
 ## Try it out
@@ -33,7 +33,7 @@ Here's the live demo of the app. You can try it out, but you need to have a Spot
 
 ## How to run this locally
 
-1. Clone the repository: `git clone https://github.com/kkrishguptaa/spotbuds.git`
+1. Clone the repository: `git clone https://github.com/ikrishg/spotbuds.git`
 2. Navigate to the project directory: `cd spotbuds`
 3. Open the `index.html` file in your browser through a local server (e.g., using `live-server` or any other static server).
 4. Create a spotify app at [Spotify Developer Dashboard](https://developer.spotify.com/dashboard/applications).
